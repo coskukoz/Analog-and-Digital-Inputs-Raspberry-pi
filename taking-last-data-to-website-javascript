@@ -1,0 +1,72 @@
+<html>
+<head>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+google.load("visualization", '1', {packages:['corechart']});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+ var query = new google.visualization.Query(
+     'https://docs.google.com/spreadsheets/d/1CpVtXz8RdvA5h67pcHqUi4vXPBPi5cOoRFOvIZOEUUs/edit#gid=0');
+ query.send(handleQueryResponse);
+}
+
+function handleQueryResponse(response) {
+ if (response.isError()) {
+   alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+   return;
+ }
+
+ var data = response.getDataTable();
+ var data = response.getDataTable();
+ var last_row = data.getNumberOfRows()-1;
+
+ document.getElementById('sensor1').innerHTML += data.getValue(last_row,1);
+ document.getElementById('sensor2').innerHTML += data.getValue(last_row,2);
+ document.getElementById('sensor3').innerHTML += data.getValue(last_row,3);
+ document.getElementById('sensor4').innerHTML += data.getValue(last_row,4);
+ document.getElementById('sensor5').innerHTML += data.getValue(last_row,5);
+ document.getElementById('sensor6').innerHTML += data.getValue(last_row,6);
+ document.getElementById('sensor7').innerHTML += data.getValue(last_row,7);
+ document.getElementById('sensor8').innerHTML += data.getValue(last_row,8);
+ document.getElementById('digital1').innerHTML += data.getValue(last_row,9);
+ document.getElementById('digital2').innerHTML += data.getValue(last_row,10);
+ document.getElementById('digital3').innerHTML += data.getValue(last_row,11);
+ document.getElementById('digital4').innerHTML += data.getValue(last_row,12);
+ document.getElementById('digital5').innerHTML += data.getValue(last_row,13);
+ document.getElementById('digital6').innerHTML += data.getValue(last_row,14);
+ document.getElementById('digital7').innerHTML += data.getValue(last_row,15);
+ document.getElementById('digital8').innerHTML += data.getValue(last_row,16);
+}
+</script>
+
+</head>
+
+
+<body>
+
+<div class="metdata" id="sensor1"></div>
+<div class="metdata" id="sensor2"></div>
+<div class="metdata" id="sensor3"></div>
+<div class="metdata" id="sensor4"></div>
+<div class="metdata" id="sensor5"></div>
+<div class="metdata" id="sensor6"></div>
+<div class="metdata" id="sensor7"></div>
+<div class="metdata" id="sensor8"></div>
+<div class="metdata" id="digital1"></div>
+<div class="metdata" id="digital2"></div>
+<div class="metdata" id="digital3"></div>
+<div class="metdata" id="digital4"></div>
+<div class="metdata" id="digital5"></div>
+<div class="metdata" id="digital6"></div>
+<div class="metdata" id="digital7"></div>
+<div class="metdata" id="digital8"></div>
+
+
+
+
+
+</body>
+
+</html>
