@@ -1,0 +1,137 @@
+<html>
+<head>
+
+</script>
+
+    <script type="text/javascript">
+      google.load('visualization', '1');
+      google.setOnLoadCallback(drawVisualization);
+      function drawVisualization() {
+		  
+		  // --------------DAILY CHARTS------------------------
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'LineChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1CpVtXz8RdvA5h67pcHqUi4vXPBPi5cOoRFOvIZOEUUs/edit#gid=0',
+          query: 'SELECT A,B ORDER BY A DESC LIMIT 96',
+          options: {'title': 'Sensor-1', 'backgroundColor': 'transparent', 'colors': ['#4588A5'], 'explorer': { axis: 'horizontal' }},
+          containerId: 'sensor1grafikdaily'
+        });
+        wrapper.draw()
+		//---OTHER DAILY CHARTS-----		
+
+		//--------------------WEEKLY CHARTS----------------------
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'LineChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1CpVtXz8RdvA5h67pcHqUi4vXPBPi5cOoRFOvIZOEUUs/edit#gid=0',
+          query: 'SELECT A,B ORDER BY A DESC LIMIT 672',
+          options: {'title': 'Sensor-1', 'backgroundColor': 'transparent', 'colors': ['#4588A5'], 'explorer': { axis: 'horizontal' }},
+          containerId: 'sensor1grafikweekly'
+        });
+        wrapper.draw()
+		//---OTHER WEEKLY CHARTS-----	
+
+		//------------------MONTLY CHARTS--------------------------
+		        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'LineChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1CpVtXz8RdvA5h67pcHqUi4vXPBPi5cOoRFOvIZOEUUs/edit#gid=0',
+          query: 'SELECT A,B ORDER BY A DESC LIMIT 4320',
+          options: {'title': 'Sensor-1', 'backgroundColor': 'transparent', 'colors': ['#4588A5'], 'explorer': { axis: 'horizontal' }},
+          containerId: 'sensor1grafikmonthly'
+        });
+        wrapper.draw()
+		//---OTHER MONTHLY CHARTS-----	
+
+
+		//----------------ANNUAL CHARTS--------------------------------
+		        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'LineChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/1CpVtXz8RdvA5h67pcHqUi4vXPBPi5cOoRFOvIZOEUUs/edit#gid=0',
+          query: 'SELECT A,B ORDER BY A DESC LIMIT 32256',
+          options: {'title': 'Sensor-1', 'backgroundColor': 'transparent', 'colors': ['#4588A5'], 'explorer': { axis: 'horizontal' }},
+          containerId: 'sensor1grafikannual'
+        });
+        wrapper.draw()
+		//---OTHER ANNUAL CHARTS-----	
+
+      }
+    </script>
+</head>
+
+<body>
+
+<div class="sensors" id="sensor1grafikdaily"></div>
+                        <hr>
+                    	<div class="sensors" id="sensor2grafikdaily"></div>
+                        <hr>
+                        <div class="sensors" id="sensor3grafikdaily"></div>
+                        <hr>
+                        <div class="sensors" id="sensor4grafikdaily"></div>
+                        <hr>
+                        <div class="sensors" id="sensor5grafikdaily"></div>
+                        <hr>
+                        <div class="sensors" id="sensor6grafikdaily"></div>
+                        <hr>
+                        <div class="sensors" id="sensor7grafikdaily"></div>
+                        <hr>
+                        <div class="sensors" id="sensor8grafikdaily"></div>
+
+
+
+
+Weekly Charts;
+
+                     	<div class="sensors" id="sensor1grafikweekly"></div>
+                        <hr>
+                    	<div class="sensors" id="sensor2grafikweekly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor3grafikweekly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor4grafikweekly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor5grafikweekly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor6grafikweekly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor7grafikweekly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor8grafikweekly"></div>
+
+Monthly Charts;
+                    	<div class="sensors" id="sensor1grafikmonthly"></div>
+                    	<hr>
+                        <div class="sensors" id="sensor2grafikmonthly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor3grafikmonthly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor4grafikmonthly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor5grafikmonthly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor6grafikmonthly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor7grafikmonthly"></div>
+                        <hr>
+                        <div class="sensors" id="sensor8grafikmonthly"></div>
+
+Annual Charts;
+                        <div class="sensors" id="sensor1grafikannual"></div>
+                    	<hr>
+                        <div class="sensors" id="sensor2grafikannual"></div>
+                        <hr>
+                        <div class="sensors" id="sensor3grafikannual"></div>
+                        <hr>
+                        <div class="sensors" id="sensor4grafikannual"></div>
+                        <hr>
+                        <div class="sensors" id="sensor5grafikannual"></div>
+                        <hr>
+                        <div class="sensors" id="sensor6grafikannual"></div>
+                        <hr>
+                        <div class="sensors" id="sensor7grafikannual"></div>
+                        <hr>
+                        <div class="sensors" id="sensor8grafikannual"></div>
+
+
+
+</body>
+
+</html>
